@@ -10,7 +10,7 @@ Using [shadcn](https://ui.shadcn.com/) , *best Next.js 13 UI Library* to initial
     npx create-next-app@latest ecommerce-admin --typescript --tailwind --eslint
 
 
-**Also,** I using [Route Groups](https://nextjs.org/docs/app/building-your-application/routing/route-groups).
+**Also,** using [Route Groups](https://nextjs.org/docs/app/building-your-application/routing/route-groups) here.
 You can use `(foldername)` to create a folder. This allows you to organize your route segments and project files into logical groups without affecting the URL path structure.
 
 # Authentication
