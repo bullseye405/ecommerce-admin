@@ -23,7 +23,7 @@ Allows both configurations for **App router** and **Pages** 🥳
 
 You can find the pages on *[/app/(auth)/(routes)/](https://github.com/bullseye405/ecommerce-admin/tree/clerk-auth/app/%28auth%29/%28routes%29)*
 
-*** *Notice how I route groups are used to organized the folders*
+*** *Notice how route groups are used to organized the folders*
 
 
 ***...TO BE CONTINUED***
