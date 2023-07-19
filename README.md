@@ -25,7 +25,7 @@ Using [shadcn](https://ui.shadcn.com/) , *best Next.js 13 UI Library* to initial
 
 You can use `(foldername)` to create a folder. This allows you to organize your route segments and project files into logical groups without affecting the URL path structure.
 
-  
+Get code in this branch : [evn-setup](https://github.com/bullseye405/ecommerce-admin/tree/evn-setup)
 
 # Authentication
 
@@ -43,10 +43,7 @@ Allows both configurations for **App router** and **Pages** 🥳
 
 You can find the pages on *[/app/(auth)/(routes)/](https://github.com/bullseye405/ecommerce-admin/tree/clerk-auth/app/%28auth%29/%28routes%29)*
 
-  
-
-***  *Notice how I route groups are used to organized the folders*
-
+*** *Notice how route groups are used to organized the folders*
   
 
 Get code in this branch : [clerk-auth](https://github.com/bullseye405/ecommerce-admin/tree/clerk-auth)
