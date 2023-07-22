@@ -16,7 +16,7 @@ const SetupPage = () => {
   return (
     <div className="p-4">
       <Modal
-        isOpen
+        isOpen={isOpen}
         onClose={() => {}}
         title="test"
         description="test description"
