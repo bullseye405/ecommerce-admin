@@ -1,0 +1,6 @@
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_Z3JlYXQtaWd1YW5hLTQ0LmNsZXJrLmFjY291bnRzLmRldiQ
+CLERK_SECRET_KEY=sk_test_mY9gPCB6L1mGWTETGTMqUm8tpagJ0clFIEGw8B6pPT
+
+DATABASE_URL='mysql://48t1ex1u0p2kga0y9zpm:pscale_pw_t2YiEJrsarvY2iPSzPyFHY7GXOlNHO3Bl2MsxC8N7EB@aws.connect.psdb.cloud/ecommerce-admin?sslaccept=strict'
+
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=dw4hs2zbi
