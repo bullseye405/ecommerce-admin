@@ -1,6 +1,6 @@
 import prismadb from '@/lib/prismadb';
 import { FC } from 'react';
-import CategoryForm from './components/billboard-form';
+import CategoryForm from './components/category-form';
 
 interface CategoryPageProps {
   params: { categoryId: string; storeId: string };
