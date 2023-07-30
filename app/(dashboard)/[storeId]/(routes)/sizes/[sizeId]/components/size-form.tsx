@@ -21,7 +21,6 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import Heading from '@/components/ui/heading';
-import ImageUpload from '@/components/ui/image-upload';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
 import { useOrigin } from '@/hooks/use-origin';
@@ -84,7 +83,7 @@ const SizeForm: FC<SizeFormProps> = ({ initialData }) => {
       setLoading(true);
       await axios.delete(`/api/${params.storeId}/sizes/${params.sizeId}}`);
       router.refresh();
-      router.push('/');
+      router.push(`/${params.storeId}/sizes`);
       toast.success('Sizes deleted');
     } catch (error) {
       toast.error('Make sure you removed all products using this size.');

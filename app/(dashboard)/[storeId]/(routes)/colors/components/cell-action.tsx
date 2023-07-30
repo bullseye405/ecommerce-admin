@@ -6,7 +6,7 @@ import { toast } from 'react-hot-toast';
 import { useParams, useRouter } from 'next/navigation';
 import axios from 'axios';
 
-import { SizeColumn } from './columns';
+import { ColorColumn } from './columns';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,7 +18,7 @@ import { Button } from '@/components/ui/button';
 import { AlertModal } from '@/components/modals/alert-modals';
 
 interface CellActionProps {
-  data: SizeColumn;
+  data: ColorColumn;
 }
 
 export const CellAction: FC<CellActionProps> = ({ data }) => {
@@ -30,22 +30,22 @@ export const CellAction: FC<CellActionProps> = ({ data }) => {
 
   const onCopy = (id: string) => {
     navigator.clipboard.writeText(id);
-    toast.success('Size Id copied to clipboard');
+    toast.success('Color Id copied to clipboard');
   };
 
   const onUpdate = () => {
-    router.push(`/${params.storeId}/sizes/${data.id}`);
+    router.push(`/${params.storeId}/colors/${data.id}`);
   };
 
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/${params.storeId}/sizes/${data.id}`);
+      await axios.delete(`/api/${params.storeId}/colors/${data.id}`);
       router.refresh();
-      router.push(`/${params.storeId}/sizes`);
-      toast.success('Sizes deleted');
+      router.push(`/${params.storeId}/colors`);
+      toast.success('Colors deleted');
     } catch (error) {
-      toast.error('Make sure you removed all categories using this size.');
+      toast.error('Make sure you removed all products using this color.');
     } finally {
       setLoading(false);
       setOpen(false);
