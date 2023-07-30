@@ -1,18 +1,17 @@
 'use client';
 
-import { Billboard } from '@prisma/client';
-import React, { FC, useState } from 'react';
-import * as z from 'zod';
-import { Trash } from 'lucide-react';
-import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { toast } from 'react-hot-toast';
+import { Billboard } from '@prisma/client';
 import axios from 'axios';
+import { Trash } from 'lucide-react';
 import { useParams, useRouter } from 'next/navigation';
+import { FC, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
+import * as z from 'zod';
 
-import { Separator } from '@/components/ui/separator';
+import { AlertModal } from '@/components/modals/alert-modals';
 import { Button } from '@/components/ui/button';
-import Heading from '@/components/ui/heading';
 import {
   Form,
   FormControl,
@@ -21,10 +20,11 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { AlertModal } from '@/components/modals/alert-modals';
-import { useOrigin } from '@/hooks/use-origin';
+import Heading from '@/components/ui/heading';
 import ImageUpload from '@/components/ui/image-upload';
+import { Input } from '@/components/ui/input';
+import { Separator } from '@/components/ui/separator';
+import { useOrigin } from '@/hooks/use-origin';
 
 const formSchema = z.object({
   label: z.string().min(1),
@@ -173,7 +173,6 @@ const BillboardForm: FC<BillboardFormProps> = ({ initialData }) => {
         </form>
       </Form>
 
-      <Separator />
     </>
   );
 };
