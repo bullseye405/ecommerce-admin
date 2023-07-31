@@ -13,6 +13,10 @@ export async function GET(
       return new NextResponse('Unauthenticated', { status: 401 });
     }
 
+    if (!params.billboardId) {
+      return new NextResponse('Billboard Id is required', { status: 400 });
+    }
+
     const billboard = await prismadb.billboard.findUnique({
       where: {
         id: params.billboardId,
