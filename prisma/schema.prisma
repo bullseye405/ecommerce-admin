@@ -60,7 +60,7 @@ model Size {
   value     String
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt()
-  Product   Product[]
+  products  Product[]
 
   @@index([storeId])
 }
@@ -73,7 +73,7 @@ model Color {
   value     String
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt()
-  Product   Product[]
+  products  Product[]
 
   @@index([storeId])
 }
@@ -92,7 +92,7 @@ model Product {
   size       Size     @relation(fields: [sizeId], references: [id])
   colorId    String
   color      Color    @relation(fields: [colorId], references: [id])
-  Image      Image[]
+  images     Image[]
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt()
 
