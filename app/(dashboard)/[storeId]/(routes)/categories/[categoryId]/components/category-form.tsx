@@ -94,7 +94,7 @@ const CategoryForm: FC<CategoryFormProps> = ({ initialData, billboards }) => {
         `/api/${params.storeId}/categories/${params.categoryId}}`
       );
       router.refresh();
-      router.push( `/${params.storeId}/categories`);
+      router.push(`/${params.storeId}/categories`);
       toast.success('Categories deleted');
     } catch (error) {
       toast.error('Make sure you removed all products using this category.');
