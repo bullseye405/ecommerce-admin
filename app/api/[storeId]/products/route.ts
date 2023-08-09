@@ -2,7 +2,6 @@ import { auth } from '@clerk/nextjs';
 import { NextResponse } from 'next/server';
 
 import prismadb from '@/lib/prismadb';
-import { useParams } from 'next/navigation';
 
 export async function POST(
   req: Request,
@@ -123,6 +122,7 @@ export async function GET(
         colorId,
         sizeId,
         isFeatured: isFeatured ? true : undefined,
+        isArchived: false,
       },
       include: {
         images: true,

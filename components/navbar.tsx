@@ -7,9 +7,7 @@ import { redirect } from 'next/navigation';
 import prismadb from '@/lib/prismadb';
 import { ThemeToggle } from './theme-toggle';
 
-type Props = {};
-
-const Navbar = async (props: Props) => {
+const Navbar = async () => {
   const { userId } = auth();
   if (!userId) {
     redirect('/sign-in');
