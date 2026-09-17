@@ -3,13 +3,14 @@ import { FC } from 'react';
 import SizeForm from './components/size-form';
 
 interface SizePageProps {
-  params: { sizeId: string };
+  params: Promise<{ sizeId: string }>;
 }
 
 const SizePage: FC<SizePageProps> = async ({ params }) => {
+  const { sizeId } = await params;
   const size = await prismadb.size.findUnique({
     where: {
-      id: params.sizeId,
+      id: sizeId,
     },
   });
 
