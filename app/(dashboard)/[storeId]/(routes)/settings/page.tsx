@@ -5,11 +5,12 @@ import React from 'react';
 import SettingsForm from './components/settings-form';
 
 interface SettingsPageProps {
-  params: {
+  params: Promise<{
     storeId: string;
-  };
+  }>;
 }
 const SettingsPage = async ({ params }: SettingsPageProps) => {
+  const { storeId } = await params;
   const { userId } = await auth();
 
   if (!userId) {
@@ -17,7 +18,7 @@ const SettingsPage = async ({ params }: SettingsPageProps) => {
   }
 
   const store = await prismadb.store.findFirst({
-    where: { id: params.storeId, userId },
+    where: { id: storeId, userId },
   });
 
   if (!store) {
