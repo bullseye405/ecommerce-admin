@@ -49,7 +49,7 @@ const formSchema = z.object({
   isArchived: z.boolean().default(false).optional(),
 });
 
-type ProductFormValues = z.infer<typeof formSchema>;
+type ProductFormValues = z.input<typeof formSchema>;
 
 interface ProductFormProps {
   initialData: (Product & { images: Image[] }) | null;
@@ -124,10 +124,10 @@ const ProductForm: FC<ProductFormProps> = ({
     try {
       setLoading(true);
       await axios.delete(
-        `/api/${params.storeId}/products/${params.productId}}`
+        `/api/${params.storeId}/products/${params.productId}`
       );
       router.refresh();
-      router.push(`/${params.storeId}/products}`);
+      router.push(`/${params.storeId}/products`);
       toast.success('Product deleted');
     } catch (error) {
       toast.error('Make sure you removed all categories using this product.');
@@ -227,6 +227,7 @@ const ProductForm: FC<ProductFormProps> = ({
                         disabled={loading}
                         placeholder="9.99"
                         {...field}
+                        value={field.value as number}
                       />
                     </FormControl>
                     <FormMessage />
